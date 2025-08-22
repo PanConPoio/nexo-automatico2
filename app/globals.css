@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 25 95% 47%; /* TRS Orange */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 50% 32%; /* TRS Indigo Blue */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 100% 95%; /* TRS Iceflow */
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 240 100% 37%; /* TRS Pantone Blue */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 25 95% 47%; /* TRS Orange */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 100%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 25 95% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 50% 32%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 240 100% 37%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 25 95% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Animaciones personalizadas TRS */
+@layer components {
+  .trs-gradient-text {
+    @apply bg-gradient-to-r from-trs-orange to-trs-blue-indigo bg-clip-text text-transparent;
+  }
+
+  .trs-shadow {
+    box-shadow: 0 4px 20px rgba(237, 115, 2, 0.15);
+  }
+
+  .trs-card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-trs-orange/10 hover:-translate-y-1;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-trs-blue-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-trs-orange rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-trs-orange/80;
+}
