@@ -1,4 +1,4 @@
-const ADMIN_EMAIL = "trslogistic25@gmail.com" // Email autorizado para acceso (corregido)
+const ADMIN_EMAIL = "example5@gmail.com" // Email autorizado para acceso (corregido)
 const CODE_EXPIRY_MINUTES = 10
 
 import { createClient } from "./supabase"
