@@ -131,7 +131,7 @@ export default function LoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="trslogistica5@gmail.com"
+                  placeholder="Ingresa el email autorizado"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -183,7 +183,7 @@ export default function LoginPage() {
           <p className="mt-4 text-center text-sm text-muted-foreground">
             {step === "email" ? (
               <>
-                Email autorizado: <strong>trslogistica5@gmail.com</strong>
+                Email autorizado: <strong>example5@gmail.com</strong>
               </>
             ) : (
               <>El código expira en 10 minutos</>
